@@ -1,6 +1,6 @@
 from crewai import Crew,Process
-from tasks import research_task,write_task
-from agents import news_researcher,news_writer
+from python_files.crewai_folder.tasks import research_task,write_task
+from python_files.crewai_folder.agents import news_researcher,news_writer
 
 ## Forming the tech focused crew with some enhanced configuration
 crew=Crew(

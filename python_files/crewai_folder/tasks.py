@@ -1,6 +1,6 @@
 from crewai import Task
-from tools import tool
-from agents import news_researcher,news_writer
+from python_files.crewai_folder.tools import tool
+from python_files.crewai_folder.agents import news_researcher,news_writer
 
 # Research task
 research_task = Task(
