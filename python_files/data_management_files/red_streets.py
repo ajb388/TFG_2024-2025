@@ -55,7 +55,7 @@ def resaltar_colores_en_area(image_path, colores_hex, area_coords, output_path=N
         print(f"Imagen guardada en: {output_path}")
 
 # Ejemplo de uso
-image_path = "sustainability-12-01336-g001.jpg"  # Ruta de la imagen
+image_path = "images/sustainability-12-01336-g001.jpg"  # Ruta de la imagen
 colores_hex = ["#A19E97", "#B4B4B4", "#C8C8C8"]  # Colores a resaltar
 area_coords = (130, 365, 3250, 1490)  # Coordenadas aproximadas del área (x1, y1, x2, y2)
 output_path = "colores_resaltados_area.jpg"  # Opcional: guarda la imagen
