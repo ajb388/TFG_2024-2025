@@ -1,53 +1,88 @@
 from crewai import Agent, Crew, Process, Task
 from crewai.project import CrewBase, agent, crew, task
-
-# If you want to run a snippet of code before or after the crew starts, 
-# you can use the @before_kickoff and @after_kickoff decorators
-# https://docs.crewai.com/concepts/crews#example-crew-class-with-decorators
+from crewai.knowledge.source.json_knowledge_source import JSONKnowledgeSource
 
 @CrewBase
 class TfgProyect():
 	"""TfgProyect crew"""
 
-	# Learn more about YAML configuration files here:
 	# Agents: https://docs.crewai.com/concepts/agents#yaml-configuration-recommended
 	# Tasks: https://docs.crewai.com/concepts/tasks#yaml-configuration-recommended
 	agents_config = 'config/agents.yaml'
 	tasks_config = 'config/tasks.yaml'
 
-	# If you would like to add tools to your agents, you can learn more about it here:
+	
+
 	# https://docs.crewai.com/concepts/agents#agent-tools
 	@agent
-	def researcher(self) -> Agent:
+	def overseer(self) -> Agent:
 		return Agent(
-			config=self.agents_config['researcher'],
+			config=self.agents_config['overseer'],
 			verbose=True,
+			memory=True,
 			llm = "ollama/mistral"
 
 		)
 
 	@agent
-	def reporting_analyst(self) -> Agent:
+	def cofeewatch(self) -> Agent:
+		json_source_central = JSONKnowledgeSource(
+    		file_paths=["json/central/cafeteria_central_smooth_min.json"]
+			)
+
+		json_source_comedor = JSONKnowledgeSource(
+    		file_paths=["json/comedor/comedor_universidad_adjusted.json"]
+		)
 		return Agent(
-			config=self.agents_config['reporting_analyst'],
+			config=self.agents_config['cofeewatch'],
 			verbose=True,
-			llm = "ollama/mistral"
+			llm = "ollama/mistral",
+			knowledge_sources= [json_source_comedor, json_source_central]
+
+		)
+	
+	@agent
+	def classflow(self) -> Agent:
+		json_source_humanidades = JSONKnowledgeSource(
+    		file_paths=["json/humanidades/cafeteria_humanidades_smooth_friday.json"]
+		)
+		return Agent(
+			config=self.agents_config['classflow'],
+			verbose=True,
+			llm = "ollama/mistral",
+			knowledge_sources= [json_source_humanidades]
 
 		)
 
-	# To learn more about structured task outputs, 
-	# task dependencies, and task callbacks, check out the documentation:
 	# https://docs.crewai.com/concepts/tasks#overview-of-a-task
 	@task
-	def research_task(self) -> Task:
+	def seleccion_agente(self) -> Task:
 		return Task(
-			config=self.tasks_config['research_task'],
+			config=self.tasks_config['seleccion_agente'],
 		)
 
 	@task
-	def reporting_task(self) -> Task:
+	def responder_pregunta(self) -> Task:
 		return Task(
-			config=self.tasks_config['reporting_task'],
+			config=self.tasks_config['responder_pregunta'],
+		)
+	
+	@task
+	def obtener_informacion_cofeewatch(self) -> Task:
+		return Task(
+			config=self.tasks_config['obtener_informacion_cofeewatch'],
+		)
+	
+	@task
+	def obtener_informacion_classflow(self) -> Task:
+		return Task(
+			config=self.tasks_config['obtener_informacion_classflow'],
+		)
+
+	@task
+	def responder_pregunta_overseer(self) -> Task:
+		return Task(
+			config=self.tasks_config['responder_pregunta_overseer'],
 			output_file='report.md'
 		)
 
@@ -60,7 +95,6 @@ class TfgProyect():
 		return Crew(
 			agents=self.agents, # Automatically created by the @agent decorator
 			tasks=self.tasks, # Automatically created by the @task decorator
-			process=Process.sequential,
 			verbose=True,
-			# process=Process.hierarchical, # In case you wanna use that instead https://docs.crewai.com/how-to/Hierarchical/
+			process=Process.hierarchical
 		)

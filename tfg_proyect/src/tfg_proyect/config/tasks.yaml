@@ -1,17 +1,41 @@
-research_task:
+seleccion_agente:
   description: >
-    Conduct a thorough research about {topic}
-    Make sure you find any interesting and relevant information given
-    the current year is {current_year}.
+    Según la pregunta: "{topic}", tienes que preguntar a los agentes para obtener la información necesaria.
+    Elige al agente más adecuado para la tarea.
+    Recuerda la especialidad de cada agente para luego asignarle la tarea correspondiente.
   expected_output: >
-    A list with 10 bullet points of the most relevant information about {topic}
-  agent: researcher
+  agent: overseer
 
-reporting_task:
+responder_pregunta:
   description: >
-    Review the context you got and expand each topic into a full section for a report.
-    Make sure the report is detailed and contains any and all relevant information.
+    Responde la pregunta: "{topic}" con la información que obtuviste del agente.
+    Asegúrate de ser claro y conciso en tu respuesta.
   expected_output: >
-    A fully fledged report with the main topics, each with a full section of information.
-    Formatted as markdown without '```'
-  agent: reporting_analyst
+    Respuesta clara y concisa a la pregunta planteada.
+  agent: overseer
+
+obtener_informacion_cofeewatch:
+  description: >
+    Obtienes información relevante para responder la pregunta: "{topic}", basandote exclusivamente en la información
+    que tienes. Si no puedes responder la pregunta, debes decir que no tienes información.
+    Luego, envía la información obtenida de vuelta a quien te la solicitó.
+  expected_output: >
+    Información relevante para responder la pregunta planteada, enviada de vuelta al solicitante.
+  agent: cofeewatch
+
+  obtener_informacion_classflow:
+  description: >
+    Obtienes información relevante para responder la pregunta: "{topic}", basandote exclusivamente en la información
+    que tienes. Si no puedes responder la pregunta, debes decir que no tienes información.
+    Luego, envía la información obtenida de vuelta a quien te la solicitó.
+  expected_output: >
+    Información relevante para responder la pregunta planteada, enviada de vuelta al solicitante.
+  agent: classflow
+
+responder_pregunta_overseer:
+  description: >
+    Responde la pregunta: "{topic}" con la información que obtuviste del agente.
+    Asegúrate de ser claro y conciso en tu respuesta.
+  expected_output: >
+    Respuesta clara y concisa a la pregunta planteada.
+  agent: overseer

@@ -8,17 +8,13 @@ from tfg_proyect.crew import TfgProyect
 
 warnings.filterwarnings("ignore", category=SyntaxWarning, module="pysbd")
 
-# This main file is intended to be a way for you to run your
-# crew locally, so refrain from adding unnecessary logic into this file.
-# Replace with inputs you want to test with, it will automatically
-# interpolate any tasks and agents information
-
 def run():
     """
     Run the crew.
     """
     inputs = {
-        'topic': 'AI LLMs',
+        'topic': 'Cuál es la mejor hora para ir a comer hoy miércoles?',
+        'current_day': datetime.now().strftime('%A'),
         'current_year': str(datetime.now().year)
     }
     
@@ -33,7 +29,7 @@ def train():
     Train the crew for a given number of iterations.
     """
     inputs = {
-        "topic": "AI LLMs"
+        'topic': 'Cuál es la mejor hora para ir a comer hoy miércoles?'
     }
     try:
         TfgProyect().crew().train(n_iterations=int(sys.argv[1]), filename=sys.argv[2], inputs=inputs)
@@ -56,7 +52,7 @@ def test():
     Test the crew execution and returns the results.
     """
     inputs = {
-        "topic": "AI LLMs"
+        'topic': 'Cuál es la mejor hora para ir a comer hoy miércoles?'
     }
     try:
         TfgProyect().crew().test(n_iterations=int(sys.argv[1]), openai_model_name=sys.argv[2], inputs=inputs)
