@@ -27,11 +27,11 @@ class TfgProyect():
 	@agent
 	def cofeewatch(self) -> Agent:
 		json_source_central = JSONKnowledgeSource(
-    		file_paths=["json/central/cafeteria_central_smooth_min.json"]
+    		file_paths=["cafeteria_central_smooth_min.json"]
 			)
 
 		json_source_comedor = JSONKnowledgeSource(
-    		file_paths=["json/comedor/comedor_universidad_adjusted.json"]
+    		file_paths=["comedor_universidad_adjusted.json"]
 		)
 		return Agent(
 			config=self.agents_config['cofeewatch'],
@@ -44,7 +44,7 @@ class TfgProyect():
 	@agent
 	def classflow(self) -> Agent:
 		json_source_humanidades = JSONKnowledgeSource(
-    		file_paths=["json/humanidades/cafeteria_humanidades_smooth_friday.json"]
+    		file_paths=["cafeteria_humanidades_smooth_friday.json"]
 		)
 		return Agent(
 			config=self.agents_config['classflow'],
@@ -93,8 +93,8 @@ class TfgProyect():
 		# https://docs.crewai.com/concepts/knowledge#what-is-knowledge
 
 		return Crew(
-			agents=self.agents, # Automatically created by the @agent decorator
-			tasks=self.tasks, # Automatically created by the @task decorator
+			agents=self.agents,
+			tasks=self.tasks,
 			verbose=True,
 			process=Process.hierarchical
 		)
