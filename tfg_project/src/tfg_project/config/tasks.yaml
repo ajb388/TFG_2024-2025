@@ -1,0 +1,8 @@
+responder_pregunta_overseer:
+  description: >
+    Recibe una pregunta: "{topic}" y responde basándose en su conocimiento.
+    Si no tiene suficiente información, debe consultar sus herramientas antes de responder.
+    Debe hacer una sola acción a la vez: usar una herramienta o generar la respuesta final.
+  expected_output: >
+    Respuesta final del overseer basada en toda la información recopilada.
+  agent: overseer

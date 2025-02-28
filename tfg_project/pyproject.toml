@@ -1,0 +1,23 @@
+[project]
+name = "tfg_project"
+version = "0.1.0"
+description = "tfg_project using crewAI"
+authors = [{ name = "Your Name", email = "you@example.com" }]
+requires-python = ">=3.10,<3.13"
+dependencies = [
+    "crewai[tools]>=0.102.0,<1.0.0"
+]
+
+[project.scripts]
+tfg_project = "tfg_project.main:run"
+run_crew = "tfg_project.main:run"
+train = "tfg_project.main:train"
+replay = "tfg_project.main:replay"
+test = "tfg_project.main:test"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.crewai]
+type = "crew"
