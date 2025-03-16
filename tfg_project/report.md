@@ -1,1 +1,8 @@
-There is another cafeteria that is open on Fridays in our campus. The one located in building X operates from 8:00 AM to 4:00 PM, but you may observe an increase of people between noon and 1:00 PM, so if you want to reduce the waiting time at the cafeteria during that moment, you can consider going at another time of the day.
+Las cafeterías en el campus son:
+
+1. Cafetería Central  
+2. Café del Conocimiento  
+3. Cafetería del Centro Deportivo  
+4. Cafeterías en los Dormitorios Estudiantiles  
+5. Cafetería Cerca de los Edificios Administrativos
+```

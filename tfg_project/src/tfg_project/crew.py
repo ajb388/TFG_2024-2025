@@ -1,7 +1,8 @@
 from crewai import Agent, Crew, Process, Task, Knowledge
-from crewai.project import CrewBase, agent, crew, task
-from crewai.knowledge.source.json_knowledge_source import JSONKnowledgeSource
+from crewai.project import CrewBase, agent, crew, task, tool
+from crewai.knowledge.source.text_file_knowledge_source import TextFileKnowledgeSource
 from tfg_project.tools.custom_tool import MyCustomTool  # Importamos la herramienta
+import json
 @CrewBase
 class TfgProyect():
 	"""TfgProyect crew"""
@@ -10,13 +11,6 @@ class TfgProyect():
 	# Tasks: https://docs.crewai.com/concepts/tasks#yaml-configuration-recommended
 	agents_config = 'config/agents.yaml'
 	tasks_config = 'config/tasks.yaml'
-	json_source_central = JSONKnowledgeSource(
-    		file_paths=["cafeteria_central_smooth_min.json"]
-			)
-
-	json_source_comedor = JSONKnowledgeSource(
-    	file_paths=["comedor_universidad_adjusted.json"]
-	)
 
 	# https://docs.crewai.com/concepts/agents#agent-tools
 	# Agente principal que tiene la capacidad de delegar tareas a otros agentes
@@ -28,18 +22,24 @@ class TfgProyect():
 			memory=True,
 			allow_delegation=True,
 			tools=[
-				MyCustomTool(target_agent=self.coffeewatch()),  # 📌 Agregar coffeewatch como herramienta
-				MyCustomTool(target_agent=self.classflow())  # 📌 Agregar classflow como herramienta
+				MyCustomTool(target_agent=self.coffeewatch()),
+				MyCustomTool(target_agent=self.classflow()) 
 			]
 		)
 
 
 	@agent
 	def coffeewatch(self) -> Agent:
+		with open('cafeteria_central_smooth_min.json') as f:
+			cafeteria = json.load(f)
+		json_source_cafeteria = json.dumps(cafeteria, indent=2)
+		text_cafeteria = TextFileKnowledgeSource(
+			file_path=json_source_cafeteria)
 		return Agent(
 			config=self.agents_config['coffeewatch'],
 			verbose=True,
-			knowledge_storage=[self.json_source_central, self.json_source_comedor]
+			memory=True,
+			knowledge_sources=[text_cafeteria]
 		)
 	
 	@agent
@@ -47,9 +47,10 @@ class TfgProyect():
 		return Agent(
 			config=self.agents_config['classflow'],
 			verbose=True,
+			memory=True,
+			
 		)
 
-	# https://docs.crewai.com/concepts/tasks#overview-of-a-task
 	
 	@task
 	def responder_pregunta_overseer(self) -> Task:

@@ -7,14 +7,14 @@ from datetime import datetime
 from tfg_project.crew import TfgProyect
 
 warnings.filterwarnings("ignore", category=SyntaxWarning, module="pysbd")
+topic ='Qué cafeterías hay en el campus?'
 
 def run():
     """
     Run the crew.
     """
-
     inputs = {
-        'topic': '¿Dónde puedo comer un viernes?',
+        'topic': topic,
     }
     
     try:
@@ -28,7 +28,7 @@ def train():
     Train the crew for a given number of iterations.
     """
     inputs = {
-        'topic': '¿Dónde puedo comer un viernes?'
+        'topic': topic,
     }
     try:
         TfgProyect().crew().train(n_iterations=int(sys.argv[1]), filename=sys.argv[2], inputs=inputs)
@@ -51,7 +51,7 @@ def test():
     Test the crew execution and returns the results.
     """
     inputs = {
-        'topic': '¿Dónde puedo comer un viernes?'
+        'topic': topic,
     }
     try:
         TfgProyect().crew().test(n_iterations=int(sys.argv[1]), openai_model_name=sys.argv[2], inputs=inputs)
