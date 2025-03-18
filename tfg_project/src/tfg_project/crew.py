@@ -1,8 +1,8 @@
 from crewai import Agent, Crew, Process, Task, Knowledge
 from crewai.project import CrewBase, agent, crew, task, tool
-from crewai.knowledge.source.text_file_knowledge_source import TextFileKnowledgeSource
-from tfg_project.tools.custom_tool import MyCustomTool  # Importamos la herramienta
-import json
+from tfg_project.tools.custom_tool import MyCustomTool
+from crewai.knowledge.source.json_knowledge_source import JSONKnowledgeSource
+import os
 @CrewBase
 class TfgProyect():
 	"""TfgProyect crew"""
@@ -11,6 +11,7 @@ class TfgProyect():
 	# Tasks: https://docs.crewai.com/concepts/tasks#yaml-configuration-recommended
 	agents_config = 'config/agents.yaml'
 	tasks_config = 'config/tasks.yaml'
+	
 
 	# https://docs.crewai.com/concepts/agents#agent-tools
 	# Agente principal que tiene la capacidad de delegar tareas a otros agentes
@@ -30,16 +31,10 @@ class TfgProyect():
 
 	@agent
 	def coffeewatch(self) -> Agent:
-		with open('cafeteria_central_smooth_min.json') as f:
-			cafeteria = json.load(f)
-		json_source_cafeteria = json.dumps(cafeteria, indent=2)
-		text_cafeteria = TextFileKnowledgeSource(
-			file_path=json_source_cafeteria)
 		return Agent(
 			config=self.agents_config['coffeewatch'],
 			verbose=True,
 			memory=True,
-			knowledge_sources=[text_cafeteria]
 		)
 	
 	@agent
@@ -48,7 +43,6 @@ class TfgProyect():
 			config=self.agents_config['classflow'],
 			verbose=True,
 			memory=True,
-			
 		)
 
 	
