@@ -1,31 +1,44 @@
-from crewai import Agent, Crew, Process, Task, Knowledge
-from crewai.project import CrewBase, agent, crew, task, tool
+from crewai import Agent, Crew, Process, Task, LLM
+from crewai.project import CrewBase, agent, crew, task
 from tfg_project.tools.custom_tool import MyCustomTool
-from crewai.knowledge.source.json_knowledge_source import JSONKnowledgeSource
-import os
+from tfg_project.tools.json_reader_tool import JsonReaderTool, JsonReaderInput
+
 @CrewBase
 class TfgProyect():
-	"""TfgProyect crew"""
 
-	# Agents: https://docs.crewai.com/concepts/agents#yaml-configuration-recommended
-	# Tasks: https://docs.crewai.com/concepts/tasks#yaml-configuration-recommended
+	#Configuracion de los llm
+	deepseek_llm = LLM(
+		model= 'ollama/deepseek-r1:14b',
+		base_url = 'http://localhost:11434',
+		temperature=0
+	)
+
+	mistral_llm = LLM(
+		model= 'ollama/mistral:latest',
+		base_url = 'http://localhost:11434',
+	)
+
+	llama_llm = LLM(
+		model= 'ollama/llama3.2:latest',
+		base_url = 'http://localhost:11434',
+	)
+
+	#Configuracion de los agentes y tareas
 	agents_config = 'config/agents.yaml'
 	tasks_config = 'config/tasks.yaml'
 	
 
-	# https://docs.crewai.com/concepts/agents#agent-tools
-	# Agente principal que tiene la capacidad de delegar tareas a otros agentes
 	@agent
 	def overseer(self) -> Agent:
 		return Agent(
 			config=self.agents_config['overseer'],
 			verbose=True,
-			memory=True,
 			allow_delegation=True,
 			tools=[
 				MyCustomTool(target_agent=self.coffeewatch()),
-				MyCustomTool(target_agent=self.classflow()) 
-			]
+				#MyCustomTool(target_agent=self.classflow()) 
+			],
+		llm=self.deepseek_llm
 		)
 
 
@@ -34,7 +47,10 @@ class TfgProyect():
 		return Agent(
 			config=self.agents_config['coffeewatch'],
 			verbose=True,
-			memory=True,
+			tools=[
+				JsonReaderTool()
+			],
+			llm=self.deepseek_llm
 		)
 	
 	@agent
@@ -42,7 +58,7 @@ class TfgProyect():
 		return Agent(
 			config=self.agents_config['classflow'],
 			verbose=True,
-			memory=True,
+			llm=self.deepseek_llm
 		)
 
 	
@@ -63,7 +79,6 @@ class TfgProyect():
 			agents=[
 				self.overseer(),
 				self.coffeewatch(),
-				self.classflow()
 			],
 			tasks=[
 				self.responder_pregunta_overseer()

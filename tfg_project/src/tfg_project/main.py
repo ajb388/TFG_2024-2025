@@ -7,7 +7,8 @@ from datetime import datetime
 from tfg_project.crew import TfgProyect
 
 warnings.filterwarnings("ignore", category=SyntaxWarning, module="pysbd")
-topic ='dame los datos de la personas'
+warnings.filterwarnings("ignore", category=DeprecationWarning)
+topic ='Cual es el número de personas que hay el 01/11/2024 a las 8:50'
 
 def run():
     """

@@ -1,8 +1,1 @@
-Las cafeterías en el campus son:
-
-1. Cafetería Central  
-2. Café del Conocimiento  
-3. Cafetería del Centro Deportivo  
-4. Cafeterías en los Dormitorios Estudiantiles  
-5. Cafetería Cerca de los Edificios Administrativos
-```
+El número de personas que había en el campus el 01/11/2024 a las 8:50 fue de 150.
