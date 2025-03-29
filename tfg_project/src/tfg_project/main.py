@@ -4,18 +4,24 @@ import warnings
 
 from datetime import datetime
 
-from tfg_project.crew import TfgProyect
+from tfg_project.crew import TfgProject
 
 warnings.filterwarnings("ignore", category=SyntaxWarning, module="pysbd")
-warnings.filterwarnings("ignore", category=DeprecationWarning)
-topic ='Cual es el número de personas que hay el 01/11/2024 a las 8:50'
+
+# This main file is intended to be a way for you to run your
+# crew locally, so refrain from adding unnecessary logic into this file.
+# Replace with inputs you want to test with, it will automatically
+# interpolate any tasks and agents information
 
 def run():
     """
     Run the crew.
     """
     inputs = {
-        'topic': topic,
+        'topic': 'Cual es la mejor hora para ir a comer cuando haya gente?',
     }
-    TfgProyect().crew().kickoff(inputs=inputs)
     
+    try:
+        TfgProject().crew().kickoff(inputs=inputs)
+    except Exception as e:
+        raise Exception(f"An error occurred while running the crew: {e}")
