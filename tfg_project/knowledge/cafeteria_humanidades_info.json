@@ -1,0 +1,77 @@
+{
+  "nombre": "Cafetería de Humanidades",
+  "horario": {
+    "lunes": "09:00-17:00",
+    "martes": "09:00-17:00",
+    "miércoles": "09:00-17:00",
+    "jueves": "09:00-17:00",
+    "viernes": "09:00-17:00",
+    "sábado": "cerrado",
+    "domingo": "cerrado"
+  },
+  "servicios": [
+    "desayuno",
+    {
+      "menú diario": {
+        "precio_menú": 6.0,
+        "bebida_incluida": true,
+        "incluye_postre": true,
+        "primeros": [
+          "Patatas a la riojana",
+          "Macarrones a la carbonara",
+          "Paella",
+          "Cocido",
+          "Macarrones con tomate",
+          "Lentejas",
+          "Pasta carbonara",
+          "Patatas con jibia",
+          "Arroz a la cubana",
+          "Patatas en ajopollo",
+          "Pasta gratinada",
+          "Salteado oriental",
+          "Garbanzos serranos"
+        ],
+        "segundos": [
+          "Albóndigas en salsa",
+          "Merluza empanada",
+          "Pollo asado al horno",
+          "Cazón con tomate",
+          "Carne con tomate",
+          "Calamares en salsa",
+          "Lomo adobado con salsa Pedro Ximénez",
+          "Merluza a la vizcaína",
+          "Pollo asado",
+          "Gallo en salsa",
+          "Lomo con champiñones",
+          "Fritadilla de carne",
+          "Zarzuela de pescado",
+          "Brócoli salteados",
+          "Canelones",
+          "Gallo rebozado",
+          "Churrasco con mojo picón",
+          "Lomo a la pimienta",
+          "Cazón en adobo",
+          "Hamburguesa con queso",
+          "Pescado rebozado",
+          "Berenjenas rellenas",
+          "Gallo en salsa verde",
+          "Lomo a la jardinera",
+          "Gallo con pimientos",
+          "Brócoli gratinado",
+          "Escalope de gallo",
+          "Cuajadera de pescado",
+          "Hamburguesa con queso gratinado",
+          "Calamares a la americana",
+          "Pastel de berenjenas",
+          "Gallo a la bilbaína"
+        ]
+      }
+    },
+    "platos combinados",
+    "bollería",
+    "paninis"
+  ],
+  "categoría": "cafetería universitaria",
+  "ubicación": "Edif. Departamental de humanidades y ciencias de la educación II",
+  "numero_imagen": "10"
+}

@@ -1,16 +1,8 @@
-obtener_informacion_cofeewatch:
-  description: >
-    Recibe una pregunta: "{topic}" y responde basándose en su conocimiento.
-    Si no tiene suficiente información, debe consultar sus herramientas antes de responder.
-    Debe hacer una sola acción a la vez: usar una herramienta o generar la respuesta final.
-  expected_output: >
-    Respuesta final del overseer basada en toda la información recopilada.
-  agent: coffeewatch
-
 responder_pregunta_overseer:
   description: >
-    Una vez has recopilado la información necesaria, debes responder a la pregunta: "{topic}".
-    Si no tienes suficiente información, debes consultar tus herramientas antes de responder.
+    Debes reponder a la pregunta {topic} a los alumnos con la información que tienes. Si no puedes responderla,
+    delega la pregunta a los agentes que tienes a tu disposición. Ten en cuenta la fecha: {time}.
   expected_output: >
-    Respuesta final del overseer basada en toda la información recopilada.
+    Tu respuesta debe ser un texto claro y amigable, que explique la respuesta de una manera sencilla y
+    sin tecnicismos.
   agent: overseer
