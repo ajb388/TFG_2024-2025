@@ -1,0 +1,45 @@
+{
+  "nombre": "Cafetería CAE",
+  "horario": {
+    "lunes": "09:00-20:00",
+    "martes": "09:00-20:00",
+    "miércoles": "09:00-20:00",
+    "jueves": "09:00-20:00",
+    "viernes": "09:00-20:00",
+    "sábado": "cerrado",
+    "domingo": "cerrado"
+  },
+  "horario_de_comida": "13:00-16:00",
+  "valoracion_clientes": 4.0,
+  "servicios": [
+    "desayuno",
+    {
+      "Platos combinados": {
+        "precio_plato": 7.0,
+        "bebida_incluida": true,
+        "incluye_postre": false,
+        "Platos": [
+          "Magra al roquefort con patatas y huevo",
+          "Pechuga de pollo con guarnición",
+          "Pasta con salsa boloñesa",
+          "Pasta con salsa carbonara",
+          "Magra con tomate, patatas y huevo",
+          "Pollo al horno con patatas y huevo",
+          "Calamares fritos con ensalada y patatas",
+          "Lasaña Boloñesa",
+          "Albondigas con patatas y huevo",
+          "Atún a la plancha con ensalada y patatas",
+          "Hamburguesa de Buey con patatas",
+          "Guiso de Jibia",
+          "Ensalada de pasta",
+          "Guiso de ternera con patatas",
+          "Soldaditos de Pavía con ensalada y patatas",
+          "Solomillo al horno con patatas y huevo"
+        ]
+      }
+    },
+    "bollería"
+  ],
+  "categoría": "cafetería universitaria",
+  "ubicación": "Centro de Atención al Estudiante de la Universidad de Almería"
+}

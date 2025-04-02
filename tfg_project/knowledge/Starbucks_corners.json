@@ -1,0 +1,12 @@
+{
+    "nombre": "Starbucks Corners",
+    "horario": "24/7",
+    "ubicaciones": [
+        "Aulario II",
+        "Biblioteca Nicolas Salmerón",
+        "Facultad de Ciencias de la Salud"
+    ],
+    "comida": false,
+    "servicios": "Café",
+    "categoría": "Maquina expendedora"
+  }

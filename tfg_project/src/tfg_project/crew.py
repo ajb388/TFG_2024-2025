@@ -2,6 +2,7 @@ from crewai import Agent, Crew, Process, Task
 from crewai.project import CrewBase, agent, crew, task
 from crewai_tools import VisionTool
 from crewai.knowledge.source.json_knowledge_source import JSONKnowledgeSource
+from tfg_project.tools.custom_tool import GoogleMapsRouteTool
 
 @CrewBase
 class TfgProject():
@@ -10,13 +11,34 @@ class TfgProject():
     tasks_config = 'config/tasks.yaml'
 
     json_humanidades = JSONKnowledgeSource(
-        file_path='cafeteria_humanidades_info.json',
+        file_path='cafeteria_humanidades.json',
         knowledge_source_name='cafeteria_humanidades',
         verbose=True,
     )
-        
-    
 
+    json_cae = JSONKnowledgeSource(
+        file_path='cafeteria_cae.json',
+        knowledge_source_name='cafeteria_cae',
+        verbose=True,
+    )
+
+    json_central = JSONKnowledgeSource(
+        file_path='cafeteria_central.json',
+        knowledge_source_name='cafeteria_central',
+        verbose=True,
+    )
+
+    json_comedor = JSONKnowledgeSource(
+        file_path='comedor_ual.json',
+        knowledge_source_name='comedor',
+        verbose=True,
+    )
+
+    json_starbucks = JSONKnowledgeSource(
+        file_path='Starbucks_corners.json',
+        knowledge_source_name='maquina_starbucks',
+        verbose=True,
+    )
 
     @agent
     def overseer(self) -> Agent:
@@ -24,11 +46,12 @@ class TfgProject():
             config=self.agents_config['overseer'],
             verbose=True,
             tools=[
-                VisionTool(description= "This tool uses OpenAI's Vision API to describe the contents of an image. The image is /app/tfg_project/images/plano_uni.jpg"
-                ),
+                #VisionTool(description= "This tool uses OpenAI's Vision API to describe the contents of an image. The image is /app/tfg_project/images/plano_uni.jpg"),
+                GoogleMapsRouteTool()
             ],
+
             allow_delegation=True,
-            
+           
         )
 
     @agent
@@ -38,11 +61,13 @@ class TfgProject():
             verbose=True,
             tools=[
                 VisionTool(description= "This tool uses OpenAI's Vision API to describe the contents of an image. The image is /app/tfg_project/images/cafeteria_humanidades.jpg"),
-                #JSONSearchTool(description= "A tool that can be used to semantic search a query from a JSON's content. The JSON is "
-                #"/app/tfg_project/json/cafeteria_volumen_final_corrected.json"),
             ],
             knowledge_sources=[
+                self.json_comedor,
                 self.json_humanidades,
+                self.json_cae,
+                self.json_central,
+                self.json_starbucks,
             ],
         )
 

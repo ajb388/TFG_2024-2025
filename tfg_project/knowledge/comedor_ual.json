@@ -1,0 +1,64 @@
+{
+    "nombre": "Cafetería de Humanidades",
+    "horario": {
+      "lunes": "13:00-16:00",
+      "martes": "13:00-16:00",
+      "miércoles": "13:00-16:00",
+      "jueves": "13:00-16:00",
+      "viernes": "13:00-16:00",
+      "sábado": "cerrado",
+      "domingo": "cerrado"
+    },
+    "valoracion_clientes": 4.3,
+    "servicios": [
+      {
+        "menú diario": {
+          "precio_menú": 6.0,
+          "bebida_incluida": true,
+          "incluye_postre": true,
+          "incluye_pan": true,
+          "incluye_ensalada": true,
+          "primeros": [
+            "Canelones",
+            "Patatas en ajopollo",
+            "Acelgas esparragadas",
+            "Arroz a la cubana",
+            "Lentejas",
+            "Macarrones",
+            "Migas",
+            "Fideos",
+            "Paella mixta",
+            "Crema de verduras",
+            "Sopa de picadillo",
+            "Cocido",
+            "Macarrones a la boloñesa",
+            "Ensalada de pasta",
+            "Estofado de judías"
+          ],
+          "segundos": [
+            "San Jacobos",
+            "Hamburguesas",
+            "Albóndigas en salsa",
+            "Croquetas",
+            "Pechuga de pollo empanada",
+            "Merluza a la plancha",
+            "Lomo con queso",
+            "Merluza empanada",
+            "Secreto",
+            "Patatas bravas",
+            "Merluza",
+            "Tortilla de verduras",
+            "Huevos con bacon",
+            "Pollo al horno"
+          ],
+          "postres": [
+            "Tillas",
+            "Yogur",
+            "Fruta del tiempo"
+          ]
+        }
+      }
+    ],
+    "categoría": "cafetería universitaria",
+    "ubicación": "Comedor de la Universidad de Almería"
+  }

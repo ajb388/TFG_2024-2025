@@ -18,10 +18,9 @@ def run():
     Run the crew.
     """
     inputs = {
-        'topic': 'Cuáles son los edificios que tengo que visitar para llegar a la cafetería de humanidades desde las instalaciones deportivas?',
+        'topic': input("Enter the topic: "),
         'time': datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
         'location': 'Universidad de Almeria',
-
     }
     
     try:

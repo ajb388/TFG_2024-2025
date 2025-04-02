@@ -9,6 +9,8 @@
     "sábado": "cerrado",
     "domingo": "cerrado"
   },
+  "horario_de_comida": "13:00-16:00",
+  "valoracion_clientes": 4.0,
   "servicios": [
     "desayuno",
     {
@@ -72,6 +74,5 @@
     "paninis"
   ],
   "categoría": "cafetería universitaria",
-  "ubicación": "Edif. Departamental de humanidades y ciencias de la educación II",
-  "numero_imagen": "10"
+  "ubicación": "Edif. Departamental de humanidades y ciencias de la educación II"
 }
