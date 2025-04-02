@@ -13,7 +13,6 @@ class GoogleMapsRouteTool(BaseTool):
     name: str = "Google Maps Walking Directions Tool"
     description: str = (
         "Dada una pregunta del usuario sobre cómo llegar de un sitio a otro dentro del campus de la Universidad de Almería",
-        "primero busca en tu fuente de conocimiento en formato JSON el nombre_maps de los lugares de {origin} y {destination}, luego",
         "usa la API de Google Maps para obtener direcciones a pie entre dos ubicaciones dentro del campus de la Universidad de Almería. "
         "Devuelve duración, distancia, pasos clave de la ruta y un enlace directo a Google Maps."
     )
@@ -76,4 +75,57 @@ class GoogleMapsRouteTool(BaseTool):
             f"\n\n🔗 Ver en Google Maps: {gmaps_url}"
         )
 
+class GoogleMapsPlaceSearchInput(BaseModel):
+    """Input schema for GoogleMapsPlaceSearchTool."""
+    place_name: str = Field(..., description="Nombre del lugar a buscar dentro del campus")
 
+class GoogleMapsPlaceSearchTool(BaseTool):
+    name: str = "Google Maps Place Search Tool"
+    description: str = (
+        "Busca un lugar concreto dentro del campus de la Universidad de Almería usando la API Places de Google Maps."
+        "Devuelve el nombre oficial, dirección, coordenadas y un enlace directo a Google Maps."
+    )
+    args_schema: Type[BaseModel] = GoogleMapsPlaceSearchInput
+
+    def _run(self, place_name: str) -> str:
+        api_key = os.getenv("GOOGLE_MAPS_API_KEY")
+        if not api_key:
+            return "❌ ERROR: Falta la variable de entorno GOOGLE_MAPS_API_KEY"
+
+        url = "https://places.googleapis.com/v1/places:searchText"
+
+        headers = {
+            "Content-Type": "application/json",
+            "X-Goog-Api-Key": api_key,
+            "X-Goog-FieldMask": "places.displayName,places.formattedAddress,places.location,places.id"
+        }
+        place_name_replace = place_name.replace(" ", "+")
+        # Contexto de búsqueda dentro del campus
+        data = {
+            "textQuery": f"{place_name_replace}, Universidad+de+Almería,+España",
+            "languageCode": "es"
+        }
+
+        response = requests.post(url, headers=headers, json=data)
+        if response.status_code != 200:
+            return f"❌ ERROR {response.status_code}: {response.text}"
+
+        resultado = response.json()
+        lugares = resultado.get("places", [])
+
+        if not lugares:
+            return "⚠️ No se encontró ningún lugar con ese nombre dentro del campus."
+
+        lugar = lugares[0]
+        nombre = lugar["displayName"]["text"]
+        direccion = lugar.get("formattedAddress", "Sin dirección disponible")
+        lat = lugar["location"]["latitude"]
+        lng = lugar["location"]["longitude"]
+        maps_link = f"https://www.google.com/maps/search/?api=1&query={lat},{lng}"
+
+        return (
+            f"📍 **Lugar encontrado:** {nombre}\n"
+            f"📫 Dirección: {direccion}\n"
+            f"🌐 Coordenadas: {lat}, {lng}\n"
+            f"🔗 [Ver en Google Maps]({maps_link})"
+        )

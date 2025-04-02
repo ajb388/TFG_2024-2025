@@ -1,97 +1,11 @@
-En la Universidad de Almería, contamos con varios aularios, cada uno con características y capacidades diferentes. A continuación, te detallo la información sobre los aularios disponibles:
+Para llegar al aulario V de la Universidad de Almería, primero dirígete a la dirección Carr. Sacramento, 04120 Almería, España. 
 
-1. **Aulario II**
-   - **Ubicación**: Aulario II de la Universidad de Almería
-   - **Capacidad**:
-     - Planta Baja:
-       - Aula 1: 98
-       - Aula 2: 174
-       - Aula 3: 132
-       - Aula 4: 128
-       - Aula 5: 56
-       - Aula 6: 63
-       - Aula 7: 84
-     - Primera Planta:
-       - Aula 8: 132
-       - Aula 9: 132
-       - Aula 10: 132
-       - Aula 11: 132
-       - Aula 12: 66
-       - Aula 13: 63
-       - Aula 14: 40
-       - Aula 15: 84
-       - Aula 16: 63
-     - Segunda Planta:
-       - Aula 17: 132
-       - Aula 18: 132
-       - Aula 19: 132
-       - Aula 20: 132
-       - Aula 21: 88
-       - Aula 22: 77
-       - Aula 23: 91
-       - Aula 24: 60
+Si no estás familiarizado con el campus, aquí tienes algunas recomendaciones para encontrarlo fácilmente:
 
-2. **Aulario IV**
-   - **Ubicación**: Aulario IV de la Universidad de Almería
-   - **Capacidad**:
-     - Planta Baja:
-       - Aula 1+10: 124
-       - Aula 2+9: 124
-       - Aula 3: 38
-       - Aula 4: 38
-       - Aula 5: 75
-       - Aula 6: 75
-       - Aula 7: 38
-       - Aula 8: 38
-     - Primera Planta:
-       - Aula 11: 62
-       - Aula 12: 62
-       - Aula 13: 62
-       - Aula 14: 62
-       - Aula 15: 62
-       - Aula 16: 62
-       - Aula 17: 62
-       - Aula 18: 62
-       - Aula 19: 62
-       - Aula 20: 62
-     - Segunda Planta:
-       - Aula 21: 38
-       - Aula 22: 38
-       - Aula 23: 38
-       - Aula 24: 38
-       - Aula 25: 38
-       - Aula 26: 62
-       - Aula 27: 75
-       - Aula 28: 75
-       - Aula 29: 38
-       - Aula 30: 38
-       - Aula 31: 25
-       - Aula 32: 25
+1. **A pie desde el centro**: Si te encuentras en el centro de Almería, puedes caminar hacia el aulario V. Te tomará alrededor de 20-30 minutos. Sigue las señalizaciones del campus.
 
-3. **Aulario V**
-   - **Ubicación**: Aulario V de la Universidad de Almería
-   - **Capacidad**:
-     - Aula 1: 60
-     - Aula 2: 60
-     - Aula 3: 46
-     - Aula 4: 60
-     - Aula 5: 60
-     - Aula 8: 100
-     - Aula 11: 60
-     - Aula 12: 60
-     - Aula 13: 60
-     - Aula 14: 60
-     - Aula 15: 60
-     - Aula 16: 62
-     - Aula 17: 100
-     - Aula 18: 100
-     - Aula 21: 62
-     - Aula 22: 62
-     - Aula 23: 62
-     - Aula 24: 62
-     - Aula 25: 62
-     - Aula 26: 62
-     - Aula 27: 100
-     - Aula 28: 100
+2. **Transporte público**: Si prefieres tomar un autobús, verifica las líneas que te llevan a la Universidad de Almería. Muchas de ellas tienen paradas cerca del aulario. Consulta la web de transporte urbano para los horarios actualizados.
 
-Estos aularios son ideales para diferentes actividades académicas y están equipados con tecnología moderna. Si necesitas más información sobre algún aulario en particular o su disponibilidad, no dudes en preguntar.
+3. **En coche**: Si decides ir en vehículo, asegúrate de seguir las señales hacia la universidad. Hay estacionamiento disponible cerca del aulario V.
+
+Puedes ver la ubicación exacta del aulario V en este [enlace a Google Maps](https://www.google.com/maps/search/?api=1&query=36.8308165,-2.4022829999999997), que te ayudará a orientarte mejor. ¡Buena suerte y nos vemos en clase!

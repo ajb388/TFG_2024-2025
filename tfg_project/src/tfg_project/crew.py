@@ -2,7 +2,7 @@ from crewai import Agent, Crew, Process, Task
 from crewai.project import CrewBase, agent, crew, task
 from crewai_tools import VisionTool
 from crewai.knowledge.source.json_knowledge_source import JSONKnowledgeSource
-from tfg_project.tools.custom_tool import GoogleMapsRouteTool
+from tfg_project.tools.custom_tool import GoogleMapsRouteTool, GoogleMapsPlaceSearchTool
 
 @CrewBase
 class TfgProject():
@@ -76,7 +76,8 @@ class TfgProject():
             config=self.agents_config['overseer'],
             verbose=True,
             tools=[
-                GoogleMapsRouteTool()
+                #GoogleMapsRouteTool(),
+                GoogleMapsPlaceSearchTool(),
             ],
             allow_delegation=True,
            
