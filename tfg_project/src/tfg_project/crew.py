@@ -46,7 +46,6 @@ class TfgProject():
             config=self.agents_config['overseer'],
             verbose=True,
             tools=[
-                #VisionTool(description= "This tool uses OpenAI's Vision API to describe the contents of an image. The image is /app/tfg_project/images/plano_uni.jpg"),
                 GoogleMapsRouteTool()
             ],
 
@@ -61,6 +60,9 @@ class TfgProject():
             verbose=True,
             tools=[
                 VisionTool(description= "This tool uses OpenAI's Vision API to describe the contents of an image. The image is /app/tfg_project/images/cafeteria_humanidades.jpg"),
+                VisionTool(description= "This tool uses OpenAI's Vision API to describe the contents of an image. The image is /app/tfg_project/images/cafeteria_cae.jpg"),
+                VisionTool(description= "This tool uses OpenAI's Vision API to describe the contents of an image. The image is /app/tfg_project/images/cafeteria_central.jpg"),
+                VisionTool(description= "This tool uses OpenAI's Vision API to describe the contents of an image. The image is /app/tfg_project/images/comedor_ual.jpg"),
             ],
             knowledge_sources=[
                 self.json_comedor,
