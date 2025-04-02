@@ -1,0 +1,41 @@
+{
+    "nombre": "Aulario II",
+    "capacidad_aulas":
+        {
+            "planta_baja":
+            {
+                "aula_1": 98,
+                "aula_2": 174,
+                "aula_3": 132,
+                "aula_4": 128,
+                "aula_5": 56,
+                "aula_6": 63,
+                "aula_7": 84
+            },
+            "primera_planta":
+            {
+                "aula_8": 132,
+                "aula_9": 132,
+                "aula_10": 132,
+                "aula_11": 132,
+                "aula_12": 66,
+                "aula_13": 63,
+                "aula_14": 40,
+                "aula_15": 84,
+                "aula_16": 63
+            },
+            "segunda_planta":
+            {
+                "aula_17": 132,
+                "aula_18": 132,
+                "aula_19": 132,
+                "aula_20": 132,
+                "aula_21": 88,
+                "aula_22": 77,
+                "aula_23": 91,
+                "aula_24": 60
+            }
+        },
+    "categoría": "Edificio académico",
+    "ubicación": "Aulario I de la Universidad de Almería"
+  }

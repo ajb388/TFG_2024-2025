@@ -1,0 +1,48 @@
+{
+    "nombre": "Aulario IV",
+    "capacidad_aulas":
+        {
+            "planta_baja":
+            {
+                "aula_1+10": 124,
+                "aula_2+9": 124,
+                "aula_3": 38,
+                "aula_4": 38,
+                "aula_5": 75,
+                "aula_6": 75,
+                "aula_7": 38,
+                "aula_8": 38
+            },
+            "primera_planta":
+            {
+                "aula_11": 62,
+                "aula_12": 62,
+                "aula_13": 62,
+                "aula_14": 62,
+                "aula_15": 62,
+                "aula_16": 62,
+                "aula_17": 62,
+                "aula_18": 62,
+                "aula_19": 62,
+                "aula_20": 62
+            },
+            "segunda_planta":
+            {
+
+                "aula_21": 38,
+                "aula_22": 38,
+                "aula_23": 38,
+                "aula_24": 38,
+                "aula_25": 38,
+                "aula_26": 62,
+                "aula_27": 75,
+                "aula_28": 75,
+                "aula_29": 38,
+                "aula_30": 38,
+                "aula_31": 25,
+                "aula_32": 25
+            }
+        },
+    "categoría": "Edificio académico",
+    "ubicación": "Aulario IV de la Universidad de Almería"
+  }

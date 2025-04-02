@@ -11,32 +11,62 @@ class TfgProject():
     tasks_config = 'config/tasks.yaml'
 
     json_humanidades = JSONKnowledgeSource(
-        file_path='cafeteria_humanidades.json',
+        file_paths='cafeteria_humanidades.json',
         knowledge_source_name='cafeteria_humanidades',
         verbose=True,
     )
 
     json_cae = JSONKnowledgeSource(
-        file_path='cafeteria_cae.json',
+        file_paths='cafeteria_cae.json',
         knowledge_source_name='cafeteria_cae',
         verbose=True,
     )
 
     json_central = JSONKnowledgeSource(
-        file_path='cafeteria_central.json',
+        file_paths='cafeteria_central.json',
         knowledge_source_name='cafeteria_central',
         verbose=True,
     )
 
     json_comedor = JSONKnowledgeSource(
-        file_path='comedor_ual.json',
+        file_paths='comedor_ual.json',
         knowledge_source_name='comedor',
         verbose=True,
     )
 
     json_starbucks = JSONKnowledgeSource(
-        file_path='Starbucks_corners.json',
+        file_paths='Starbucks_corners.json',
         knowledge_source_name='maquina_starbucks',
+        verbose=True,
+    )
+
+    json_aulario_1 = JSONKnowledgeSource(
+        file_paths='aulario_1.json',
+        knowledge_source_name='aulario_1',
+        verbose=True,
+    )
+
+    json_aulario_2 = JSONKnowledgeSource(
+        file_paths='aulario_2.json',
+        knowledge_source_name='aulario_2',
+        verbose=True,
+    )
+
+    json_aulario_3 = JSONKnowledgeSource(
+        file_paths='aulario_3.json',
+        knowledge_source_name='aulario_3',
+        verbose=True,
+    )
+
+    json_aulario_4 = JSONKnowledgeSource(
+        file_paths='aulario_4.json',
+        knowledge_source_name='aulario_4',
+        verbose=True,
+    )
+
+    json_aulario_5 = JSONKnowledgeSource(
+        file_paths='aulario_5.json',
+        knowledge_source_name='aulario_5',
         verbose=True,
     )
 
@@ -48,7 +78,6 @@ class TfgProject():
             tools=[
                 GoogleMapsRouteTool()
             ],
-
             allow_delegation=True,
            
         )
@@ -70,6 +99,22 @@ class TfgProject():
                 self.json_cae,
                 self.json_central,
                 self.json_starbucks,
+            ],
+        )
+    
+    @agent
+    def classroom_coordinator(self) -> Agent:
+        return Agent(
+            config=self.agents_config['classroom_coordinator'],
+            verbose=True,
+            tools=[
+            ],
+            knowledge_sources=[
+                self.json_aulario_1,
+                self.json_aulario_2,
+                self.json_aulario_3,
+                self.json_aulario_4,
+                self.json_aulario_5,
             ],
         )
 

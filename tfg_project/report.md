@@ -1,24 +1,97 @@
-¡Hola! Hoy, 2 de abril de 2025, hay algunas opciones abiertas en el campus para que puedas disfrutar después de clase. Aquí te dejo la información:
+En la Universidad de Almería, contamos con varios aularios, cada uno con características y capacidades diferentes. A continuación, te detallo la información sobre los aularios disponibles:
 
-1. **Cafetería de Humanidades**
-   - **Horario:** 
-     - Lunes a Viernes: 09:00 - 17:00
-     - Sábado y Domingo: Cerrado
-   - **Servicios:** 
-     - Desayuno
-     - Menú diario
-     - Platos combinados
-     - Bollería
-     - Paninis
-   - **Ubicación:** Facultad de Humanidades
+1. **Aulario II**
+   - **Ubicación**: Aulario II de la Universidad de Almería
+   - **Capacidad**:
+     - Planta Baja:
+       - Aula 1: 98
+       - Aula 2: 174
+       - Aula 3: 132
+       - Aula 4: 128
+       - Aula 5: 56
+       - Aula 6: 63
+       - Aula 7: 84
+     - Primera Planta:
+       - Aula 8: 132
+       - Aula 9: 132
+       - Aula 10: 132
+       - Aula 11: 132
+       - Aula 12: 66
+       - Aula 13: 63
+       - Aula 14: 40
+       - Aula 15: 84
+       - Aula 16: 63
+     - Segunda Planta:
+       - Aula 17: 132
+       - Aula 18: 132
+       - Aula 19: 132
+       - Aula 20: 132
+       - Aula 21: 88
+       - Aula 22: 77
+       - Aula 23: 91
+       - Aula 24: 60
 
-2. **Starbucks Corners** (Operado como máquinas expendedoras)
-   - **Horario:** 24/7
-   - **Ubicaciones:**
-     - Aulario II
-     - Biblioteca Nicolás Salmerón
-     - Facultad de Ciencias de la Salud
-   - **Servicios:** Solo café
+2. **Aulario IV**
+   - **Ubicación**: Aulario IV de la Universidad de Almería
+   - **Capacidad**:
+     - Planta Baja:
+       - Aula 1+10: 124
+       - Aula 2+9: 124
+       - Aula 3: 38
+       - Aula 4: 38
+       - Aula 5: 75
+       - Aula 6: 75
+       - Aula 7: 38
+       - Aula 8: 38
+     - Primera Planta:
+       - Aula 11: 62
+       - Aula 12: 62
+       - Aula 13: 62
+       - Aula 14: 62
+       - Aula 15: 62
+       - Aula 16: 62
+       - Aula 17: 62
+       - Aula 18: 62
+       - Aula 19: 62
+       - Aula 20: 62
+     - Segunda Planta:
+       - Aula 21: 38
+       - Aula 22: 38
+       - Aula 23: 38
+       - Aula 24: 38
+       - Aula 25: 38
+       - Aula 26: 62
+       - Aula 27: 75
+       - Aula 28: 75
+       - Aula 29: 38
+       - Aula 30: 38
+       - Aula 31: 25
+       - Aula 32: 25
 
-Si sales tarde, puedes aprovechar el Starbucks que está disponible en varias partes del campus a cualquier hora. Pero si buscas algo más sustancioso, la Cafetería de Humanidades está abierta hasta las 17:00. 
-¡Espero que disfrutes tu tiempo en el campus!
+3. **Aulario V**
+   - **Ubicación**: Aulario V de la Universidad de Almería
+   - **Capacidad**:
+     - Aula 1: 60
+     - Aula 2: 60
+     - Aula 3: 46
+     - Aula 4: 60
+     - Aula 5: 60
+     - Aula 8: 100
+     - Aula 11: 60
+     - Aula 12: 60
+     - Aula 13: 60
+     - Aula 14: 60
+     - Aula 15: 60
+     - Aula 16: 62
+     - Aula 17: 100
+     - Aula 18: 100
+     - Aula 21: 62
+     - Aula 22: 62
+     - Aula 23: 62
+     - Aula 24: 62
+     - Aula 25: 62
+     - Aula 26: 62
+     - Aula 27: 100
+     - Aula 28: 100
+
+Estos aularios son ideales para diferentes actividades académicas y están equipados con tecnología moderna. Si necesitas más información sobre algún aulario en particular o su disponibilidad, no dudes en preguntar.

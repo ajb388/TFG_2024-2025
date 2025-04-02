@@ -1,0 +1,74 @@
+{
+    "nombre": "Aulario V",
+    "Ordenador":
+        {
+            "aula_1-2-4-5-8-11-12-13-14-15-17-18-26-27-28":{
+                "Modelo": "HP Elite Mini 800 G9",
+                "RAM": "16 GB",
+                "Almacenamiento": "512 GB SSD",
+                "Sistema_Operativo": "Windows 10 LTSC 2021 64 bits",
+                "Procesador": "Intel Core i7-12700 2.10 GHz",
+                "Monitor": "HP E27 G4 27 Pulgadas"
+            },
+            "aula_3":{
+                "Modelo": "iMac Retina 5K 27 pulgadas",
+                "RAM": "16 GB",
+                "Almacenamiento": "500 GB SSD",
+                "Sistema_Operativo": "Windows 10 LTSC 2021 64 bits",
+                "Procesador": "Intel Core i5 6 núcleos 3.3 GHz",
+                "Monitor": "HP E27 G4 27 Pulgadas"
+            },
+            "aula_16-21-23":{
+                "Modelo": "HP Elite Mini 800 G5",
+                "RAM": "16 GB",
+                "Almacenamiento": "M.2 473GB KIOXIA",
+                "Sistema_Operativo": "Windows 10 Enterprise LTSC 64 bits",
+                "Procesador": "Intel Core i7-9700K 3.60 GHz",
+                "Monitor": "HP E273 27 Pulgadas"
+            },
+            "aula_22":{
+                "Modelo": "HP Elite Mini 800 G3",
+                "RAM": "8 GB",
+                "Almacenamiento": "500 GB SSD",
+                "Sistema_Operativo": "Windows 10 LTSC 2021 64 bits",
+                "Procesador": "Intel Core i7-12700 2.10 GHz",
+                "Monitor": "HP Elite E272 27 Pulgadas"
+            },
+            "aula_24-25":{
+                "Modelo": "HP Elite Mini 800 G2",
+                "RAM": "8 GB",
+                "Almacenamiento": "256 GB Samsung PM871 ",
+                "Sistema_Operativo": "Windows 10 Professional 64 bits",
+                "Procesador": "Intel Core i7-12700 2.10 GHz",
+                "Monitor": "HP E232 IPS Full HD 23 Pulgadas"
+            }
+            
+        },
+    "capacidad_aulas":
+        {
+            "aula_1": 60,
+            "aula_2": 60,
+            "aula_3": 46,
+            "aula_4": 60,
+            "aula_5": 60,
+            "aula_8": 100,
+            "aula_11": 60,
+            "aula_12": 60,
+            "aula_13": 60,
+            "aula_14": 60,
+            "aula_15": 60,
+            "aula_16": 62,
+            "aula_17": 100,
+            "aula_18": 100,
+            "aula_21": 62,
+            "aula_22": 62,
+            "aula_23": 62,
+            "aula_24": 62,
+            "aula_25": 62,
+            "aula_26": 62,
+            "aula_27": 100,
+            "aula_28": 100
+        },
+    "categoría": "Edificio académico",
+    "ubicación": "Aulario V de la Universidad de Almería"
+  }

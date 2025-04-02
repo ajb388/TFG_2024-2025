@@ -1,0 +1,35 @@
+{
+    "nombre": "Aulario III",
+    "capacidad_aulas":
+        {
+            "planta_baja":
+            {
+                "aula_1": 192,
+                "aula_2": 192,
+                "aula_3": 192,
+                "aula_4": 192,
+                "aula_5": 192
+            },
+            "primera_planta":
+            {
+                "aula_6": 192,
+                "aula_7": 192,
+                "aula_8": 192,
+                "aula_9": 192,
+                "aula_10": 192
+            },
+            "segunda_planta":
+            {
+                "aula_11": 48,
+                "aula_12": 48,
+                "aula_13": 48,
+                "aula_14": 48,
+                "aula_15": 48,
+                "aula_16": 48,
+                "aula_17": 88,
+                "aula_18": 88
+            }
+        },
+    "categoría": "Edificio académico",
+    "ubicación": "Aulario III de la Universidad de Almería"
+  }
