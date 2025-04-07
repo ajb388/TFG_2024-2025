@@ -2,7 +2,9 @@ from crewai import Agent, Crew, Process, Task
 from crewai.project import CrewBase, agent, crew, task
 from crewai_tools import VisionTool
 from crewai.knowledge.source.json_knowledge_source import JSONKnowledgeSource
+from crewai.knowledge.source.pdf_knowledge_source import PDFKnowledgeSource
 from tfg_project.tools.custom_tool import GoogleMapsRouteTool, GoogleMapsPlaceSearchTool
+from crewai_tools import ScrapeWebsiteTool
 
 @CrewBase
 class TfgProject():
@@ -70,13 +72,19 @@ class TfgProject():
         verbose=True,
     )
 
+    pdf_biblioteca = PDFKnowledgeSource(
+        file_paths='Guia_biblioteca.pdf',
+        knowledge_source_name='biblioteca',
+        verbose=True,
+    )
+
     @agent
     def overseer(self) -> Agent:
         return Agent(
             config=self.agents_config['overseer'],
             verbose=True,
             tools=[
-                #GoogleMapsRouteTool(),
+                GoogleMapsRouteTool(),
                 GoogleMapsPlaceSearchTool(),
             ],
             allow_delegation=True,
@@ -116,6 +124,32 @@ class TfgProject():
                 self.json_aulario_3,
                 self.json_aulario_4,
                 self.json_aulario_5,
+            ],
+        )
+    
+    @agent
+    def library_manager(self) -> Agent:
+        return Agent(
+            config=self.agents_config['library_manager'],
+            verbose=True,
+            tools=[
+                ScrapeWebsiteTool(website_url='https://www.ual.es/universidad/serviciosgenerales/biblioteca/prestamo/prestamo-domicilio'),
+                ScrapeWebsiteTool(website_url='https://www.ual.es/universidad/serviciosgenerales/biblioteca/prestamo/prestamo-interbibliotecario'),
+                ScrapeWebsiteTool(website_url='https://www.ual.es/universidad/serviciosgenerales/biblioteca/formacion'),
+                ScrapeWebsiteTool(website_url='https://www.ual.es/universidad/serviciosgenerales/biblioteca/prestamo/prestam-e'),
+                ScrapeWebsiteTool(website_url='https://www.ual.es/universidad/serviciosgenerales/biblioteca/servicios'),
+            ],
+            knowledge_sources=[
+                self.pdf_biblioteca,
+            ],
+        )
+    
+    def parking_advisor(self) -> Agent:
+        return Agent(
+            config=self.agents_config['parking_advisor'],
+            verbose=True,
+            tools=[
+                
             ],
         )
 

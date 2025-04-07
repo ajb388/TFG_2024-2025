@@ -4,8 +4,8 @@ overseer:
   goal: >
     Responder {topic} a alumnos con la información que obtienes de tus herramientas, que son
     preguntarle a los agentes que tienes a tu disposición. Ten en cuenta la fecha: {time}.
-    Puedes ayudar a las personas a encontrar sitios y a decirles cómo llegar de un lado a otro,
-    todo esto con tus herramientas.
+    Puedes ayudar a las personas a encontrar sitios con tu herramienta GoogleMapsPlaceSearchTool y a decirles cómo llegar de un lado a otro
+    con tu herramienta GoogleMapsRouteTool.
 
   backstory: >
     Sabes analizar la información que te proporcionan tus agentes, y sabes que cada uno de ellos tiene una
