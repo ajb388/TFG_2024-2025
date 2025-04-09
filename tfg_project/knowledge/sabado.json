@@ -1,0 +1,951 @@
+{
+  "dia": "sábado",
+  "universidad": "Nombre Universidad",
+  "plazas_totales": {
+    "Parking Principal": 100
+  },
+  "intervalos": [
+    {
+      "hora": "08:00",
+      "parkings": {
+        "Parking Principal": 3
+      }
+    },
+    {
+      "hora": "08:05",
+      "parkings": {
+        "Parking Principal": 0
+      }
+    },
+    {
+      "hora": "08:10",
+      "parkings": {
+        "Parking Principal": 7
+      }
+    },
+    {
+      "hora": "08:15",
+      "parkings": {
+        "Parking Principal": 9
+      }
+    },
+    {
+      "hora": "08:20",
+      "parkings": {
+        "Parking Principal": 3
+      }
+    },
+    {
+      "hora": "08:25",
+      "parkings": {
+        "Parking Principal": 9
+      }
+    },
+    {
+      "hora": "08:30",
+      "parkings": {
+        "Parking Principal": 9
+      }
+    },
+    {
+      "hora": "08:35",
+      "parkings": {
+        "Parking Principal": 4
+      }
+    },
+    {
+      "hora": "08:40",
+      "parkings": {
+        "Parking Principal": 5
+      }
+    },
+    {
+      "hora": "08:45",
+      "parkings": {
+        "Parking Principal": 2
+      }
+    },
+    {
+      "hora": "08:50",
+      "parkings": {
+        "Parking Principal": 2
+      }
+    },
+    {
+      "hora": "08:55",
+      "parkings": {
+        "Parking Principal": 7
+      }
+    },
+    {
+      "hora": "09:00",
+      "parkings": {
+        "Parking Principal": 2
+      }
+    },
+    {
+      "hora": "09:05",
+      "parkings": {
+        "Parking Principal": 2
+      }
+    },
+    {
+      "hora": "09:10",
+      "parkings": {
+        "Parking Principal": 8
+      }
+    },
+    {
+      "hora": "09:15",
+      "parkings": {
+        "Parking Principal": 5
+      }
+    },
+    {
+      "hora": "09:20",
+      "parkings": {
+        "Parking Principal": 1
+      }
+    },
+    {
+      "hora": "09:25",
+      "parkings": {
+        "Parking Principal": 9
+      }
+    },
+    {
+      "hora": "09:30",
+      "parkings": {
+        "Parking Principal": 7
+      }
+    },
+    {
+      "hora": "09:35",
+      "parkings": {
+        "Parking Principal": 3
+      }
+    },
+    {
+      "hora": "09:40",
+      "parkings": {
+        "Parking Principal": 8
+      }
+    },
+    {
+      "hora": "09:45",
+      "parkings": {
+        "Parking Principal": 1
+      }
+    },
+    {
+      "hora": "09:50",
+      "parkings": {
+        "Parking Principal": 7
+      }
+    },
+    {
+      "hora": "09:55",
+      "parkings": {
+        "Parking Principal": 0
+      }
+    },
+    {
+      "hora": "10:00",
+      "parkings": {
+        "Parking Principal": 14
+      }
+    },
+    {
+      "hora": "10:05",
+      "parkings": {
+        "Parking Principal": 21
+      }
+    },
+    {
+      "hora": "10:10",
+      "parkings": {
+        "Parking Principal": 20
+      }
+    },
+    {
+      "hora": "10:15",
+      "parkings": {
+        "Parking Principal": 10
+      }
+    },
+    {
+      "hora": "10:20",
+      "parkings": {
+        "Parking Principal": 22
+      }
+    },
+    {
+      "hora": "10:25",
+      "parkings": {
+        "Parking Principal": 24
+      }
+    },
+    {
+      "hora": "10:30",
+      "parkings": {
+        "Parking Principal": 21
+      }
+    },
+    {
+      "hora": "10:35",
+      "parkings": {
+        "Parking Principal": 10
+      }
+    },
+    {
+      "hora": "10:40",
+      "parkings": {
+        "Parking Principal": 12
+      }
+    },
+    {
+      "hora": "10:45",
+      "parkings": {
+        "Parking Principal": 22
+      }
+    },
+    {
+      "hora": "10:50",
+      "parkings": {
+        "Parking Principal": 13
+      }
+    },
+    {
+      "hora": "10:55",
+      "parkings": {
+        "Parking Principal": 14
+      }
+    },
+    {
+      "hora": "11:00",
+      "parkings": {
+        "Parking Principal": 19
+      }
+    },
+    {
+      "hora": "11:05",
+      "parkings": {
+        "Parking Principal": 20
+      }
+    },
+    {
+      "hora": "11:10",
+      "parkings": {
+        "Parking Principal": 14
+      }
+    },
+    {
+      "hora": "11:15",
+      "parkings": {
+        "Parking Principal": 16
+      }
+    },
+    {
+      "hora": "11:20",
+      "parkings": {
+        "Parking Principal": 21
+      }
+    },
+    {
+      "hora": "11:25",
+      "parkings": {
+        "Parking Principal": 14
+      }
+    },
+    {
+      "hora": "11:30",
+      "parkings": {
+        "Parking Principal": 22
+      }
+    },
+    {
+      "hora": "11:35",
+      "parkings": {
+        "Parking Principal": 12
+      }
+    },
+    {
+      "hora": "11:40",
+      "parkings": {
+        "Parking Principal": 24
+      }
+    },
+    {
+      "hora": "11:45",
+      "parkings": {
+        "Parking Principal": 20
+      }
+    },
+    {
+      "hora": "11:50",
+      "parkings": {
+        "Parking Principal": 19
+      }
+    },
+    {
+      "hora": "11:55",
+      "parkings": {
+        "Parking Principal": 24
+      }
+    },
+    {
+      "hora": "12:00",
+      "parkings": {
+        "Parking Principal": 13
+      }
+    },
+    {
+      "hora": "12:05",
+      "parkings": {
+        "Parking Principal": 15
+      }
+    },
+    {
+      "hora": "12:10",
+      "parkings": {
+        "Parking Principal": 17
+      }
+    },
+    {
+      "hora": "12:15",
+      "parkings": {
+        "Parking Principal": 14
+      }
+    },
+    {
+      "hora": "12:20",
+      "parkings": {
+        "Parking Principal": 13
+      }
+    },
+    {
+      "hora": "12:25",
+      "parkings": {
+        "Parking Principal": 15
+      }
+    },
+    {
+      "hora": "12:30",
+      "parkings": {
+        "Parking Principal": 14
+      }
+    },
+    {
+      "hora": "12:35",
+      "parkings": {
+        "Parking Principal": 16
+      }
+    },
+    {
+      "hora": "12:40",
+      "parkings": {
+        "Parking Principal": 16
+      }
+    },
+    {
+      "hora": "12:45",
+      "parkings": {
+        "Parking Principal": 20
+      }
+    },
+    {
+      "hora": "12:50",
+      "parkings": {
+        "Parking Principal": 13
+      }
+    },
+    {
+      "hora": "12:55",
+      "parkings": {
+        "Parking Principal": 13
+      }
+    },
+    {
+      "hora": "13:00",
+      "parkings": {
+        "Parking Principal": 23
+      }
+    },
+    {
+      "hora": "13:05",
+      "parkings": {
+        "Parking Principal": 14
+      }
+    },
+    {
+      "hora": "13:10",
+      "parkings": {
+        "Parking Principal": 15
+      }
+    },
+    {
+      "hora": "13:15",
+      "parkings": {
+        "Parking Principal": 11
+      }
+    },
+    {
+      "hora": "13:20",
+      "parkings": {
+        "Parking Principal": 12
+      }
+    },
+    {
+      "hora": "13:25",
+      "parkings": {
+        "Parking Principal": 24
+      }
+    },
+    {
+      "hora": "13:30",
+      "parkings": {
+        "Parking Principal": 20
+      }
+    },
+    {
+      "hora": "13:35",
+      "parkings": {
+        "Parking Principal": 24
+      }
+    },
+    {
+      "hora": "13:40",
+      "parkings": {
+        "Parking Principal": 10
+      }
+    },
+    {
+      "hora": "13:45",
+      "parkings": {
+        "Parking Principal": 23
+      }
+    },
+    {
+      "hora": "13:50",
+      "parkings": {
+        "Parking Principal": 18
+      }
+    },
+    {
+      "hora": "13:55",
+      "parkings": {
+        "Parking Principal": 11
+      }
+    },
+    {
+      "hora": "14:00",
+      "parkings": {
+        "Parking Principal": 14
+      }
+    },
+    {
+      "hora": "14:05",
+      "parkings": {
+        "Parking Principal": 11
+      }
+    },
+    {
+      "hora": "14:10",
+      "parkings": {
+        "Parking Principal": 22
+      }
+    },
+    {
+      "hora": "14:15",
+      "parkings": {
+        "Parking Principal": 19
+      }
+    },
+    {
+      "hora": "14:20",
+      "parkings": {
+        "Parking Principal": 22
+      }
+    },
+    {
+      "hora": "14:25",
+      "parkings": {
+        "Parking Principal": 21
+      }
+    },
+    {
+      "hora": "14:30",
+      "parkings": {
+        "Parking Principal": 23
+      }
+    },
+    {
+      "hora": "14:35",
+      "parkings": {
+        "Parking Principal": 15
+      }
+    },
+    {
+      "hora": "14:40",
+      "parkings": {
+        "Parking Principal": 21
+      }
+    },
+    {
+      "hora": "14:45",
+      "parkings": {
+        "Parking Principal": 14
+      }
+    },
+    {
+      "hora": "14:50",
+      "parkings": {
+        "Parking Principal": 11
+      }
+    },
+    {
+      "hora": "14:55",
+      "parkings": {
+        "Parking Principal": 12
+      }
+    },
+    {
+      "hora": "15:00",
+      "parkings": {
+        "Parking Principal": 5
+      }
+    },
+    {
+      "hora": "15:05",
+      "parkings": {
+        "Parking Principal": 19
+      }
+    },
+    {
+      "hora": "15:10",
+      "parkings": {
+        "Parking Principal": 10
+      }
+    },
+    {
+      "hora": "15:15",
+      "parkings": {
+        "Parking Principal": 7
+      }
+    },
+    {
+      "hora": "15:20",
+      "parkings": {
+        "Parking Principal": 8
+      }
+    },
+    {
+      "hora": "15:25",
+      "parkings": {
+        "Parking Principal": 14
+      }
+    },
+    {
+      "hora": "15:30",
+      "parkings": {
+        "Parking Principal": 5
+      }
+    },
+    {
+      "hora": "15:35",
+      "parkings": {
+        "Parking Principal": 13
+      }
+    },
+    {
+      "hora": "15:40",
+      "parkings": {
+        "Parking Principal": 15
+      }
+    },
+    {
+      "hora": "15:45",
+      "parkings": {
+        "Parking Principal": 16
+      }
+    },
+    {
+      "hora": "15:50",
+      "parkings": {
+        "Parking Principal": 17
+      }
+    },
+    {
+      "hora": "15:55",
+      "parkings": {
+        "Parking Principal": 13
+      }
+    },
+    {
+      "hora": "16:00",
+      "parkings": {
+        "Parking Principal": 6
+      }
+    },
+    {
+      "hora": "16:05",
+      "parkings": {
+        "Parking Principal": 14
+      }
+    },
+    {
+      "hora": "16:10",
+      "parkings": {
+        "Parking Principal": 10
+      }
+    },
+    {
+      "hora": "16:15",
+      "parkings": {
+        "Parking Principal": 7
+      }
+    },
+    {
+      "hora": "16:20",
+      "parkings": {
+        "Parking Principal": 9
+      }
+    },
+    {
+      "hora": "16:25",
+      "parkings": {
+        "Parking Principal": 17
+      }
+    },
+    {
+      "hora": "16:30",
+      "parkings": {
+        "Parking Principal": 5
+      }
+    },
+    {
+      "hora": "16:35",
+      "parkings": {
+        "Parking Principal": 11
+      }
+    },
+    {
+      "hora": "16:40",
+      "parkings": {
+        "Parking Principal": 18
+      }
+    },
+    {
+      "hora": "16:45",
+      "parkings": {
+        "Parking Principal": 8
+      }
+    },
+    {
+      "hora": "16:50",
+      "parkings": {
+        "Parking Principal": 7
+      }
+    },
+    {
+      "hora": "16:55",
+      "parkings": {
+        "Parking Principal": 17
+      }
+    },
+    {
+      "hora": "17:00",
+      "parkings": {
+        "Parking Principal": 17
+      }
+    },
+    {
+      "hora": "17:05",
+      "parkings": {
+        "Parking Principal": 15
+      }
+    },
+    {
+      "hora": "17:10",
+      "parkings": {
+        "Parking Principal": 6
+      }
+    },
+    {
+      "hora": "17:15",
+      "parkings": {
+        "Parking Principal": 15
+      }
+    },
+    {
+      "hora": "17:20",
+      "parkings": {
+        "Parking Principal": 12
+      }
+    },
+    {
+      "hora": "17:25",
+      "parkings": {
+        "Parking Principal": 14
+      }
+    },
+    {
+      "hora": "17:30",
+      "parkings": {
+        "Parking Principal": 15
+      }
+    },
+    {
+      "hora": "17:35",
+      "parkings": {
+        "Parking Principal": 7
+      }
+    },
+    {
+      "hora": "17:40",
+      "parkings": {
+        "Parking Principal": 16
+      }
+    },
+    {
+      "hora": "17:45",
+      "parkings": {
+        "Parking Principal": 12
+      }
+    },
+    {
+      "hora": "17:50",
+      "parkings": {
+        "Parking Principal": 8
+      }
+    },
+    {
+      "hora": "17:55",
+      "parkings": {
+        "Parking Principal": 9
+      }
+    },
+    {
+      "hora": "18:00",
+      "parkings": {
+        "Parking Principal": 10
+      }
+    },
+    {
+      "hora": "18:05",
+      "parkings": {
+        "Parking Principal": 5
+      }
+    },
+    {
+      "hora": "18:10",
+      "parkings": {
+        "Parking Principal": 19
+      }
+    },
+    {
+      "hora": "18:15",
+      "parkings": {
+        "Parking Principal": 7
+      }
+    },
+    {
+      "hora": "18:20",
+      "parkings": {
+        "Parking Principal": 18
+      }
+    },
+    {
+      "hora": "18:25",
+      "parkings": {
+        "Parking Principal": 10
+      }
+    },
+    {
+      "hora": "18:30",
+      "parkings": {
+        "Parking Principal": 7
+      }
+    },
+    {
+      "hora": "18:35",
+      "parkings": {
+        "Parking Principal": 6
+      }
+    },
+    {
+      "hora": "18:40",
+      "parkings": {
+        "Parking Principal": 6
+      }
+    },
+    {
+      "hora": "18:45",
+      "parkings": {
+        "Parking Principal": 18
+      }
+    },
+    {
+      "hora": "18:50",
+      "parkings": {
+        "Parking Principal": 10
+      }
+    },
+    {
+      "hora": "18:55",
+      "parkings": {
+        "Parking Principal": 7
+      }
+    },
+    {
+      "hora": "19:00",
+      "parkings": {
+        "Parking Principal": 8
+      }
+    },
+    {
+      "hora": "19:05",
+      "parkings": {
+        "Parking Principal": 5
+      }
+    },
+    {
+      "hora": "19:10",
+      "parkings": {
+        "Parking Principal": 6
+      }
+    },
+    {
+      "hora": "19:15",
+      "parkings": {
+        "Parking Principal": 6
+      }
+    },
+    {
+      "hora": "19:20",
+      "parkings": {
+        "Parking Principal": 5
+      }
+    },
+    {
+      "hora": "19:25",
+      "parkings": {
+        "Parking Principal": 8
+      }
+    },
+    {
+      "hora": "19:30",
+      "parkings": {
+        "Parking Principal": 9
+      }
+    },
+    {
+      "hora": "19:35",
+      "parkings": {
+        "Parking Principal": 2
+      }
+    },
+    {
+      "hora": "19:40",
+      "parkings": {
+        "Parking Principal": 7
+      }
+    },
+    {
+      "hora": "19:45",
+      "parkings": {
+        "Parking Principal": 6
+      }
+    },
+    {
+      "hora": "19:50",
+      "parkings": {
+        "Parking Principal": 6
+      }
+    },
+    {
+      "hora": "19:55",
+      "parkings": {
+        "Parking Principal": 6
+      }
+    },
+    {
+      "hora": "20:00",
+      "parkings": {
+        "Parking Principal": 8
+      }
+    },
+    {
+      "hora": "20:05",
+      "parkings": {
+        "Parking Principal": 1
+      }
+    },
+    {
+      "hora": "20:10",
+      "parkings": {
+        "Parking Principal": 3
+      }
+    },
+    {
+      "hora": "20:15",
+      "parkings": {
+        "Parking Principal": 0
+      }
+    },
+    {
+      "hora": "20:20",
+      "parkings": {
+        "Parking Principal": 7
+      }
+    },
+    {
+      "hora": "20:25",
+      "parkings": {
+        "Parking Principal": 8
+      }
+    },
+    {
+      "hora": "20:30",
+      "parkings": {
+        "Parking Principal": 8
+      }
+    },
+    {
+      "hora": "20:35",
+      "parkings": {
+        "Parking Principal": 1
+      }
+    },
+    {
+      "hora": "20:40",
+      "parkings": {
+        "Parking Principal": 8
+      }
+    },
+    {
+      "hora": "20:45",
+      "parkings": {
+        "Parking Principal": 6
+      }
+    },
+    {
+      "hora": "20:50",
+      "parkings": {
+        "Parking Principal": 9
+      }
+    },
+    {
+      "hora": "20:55",
+      "parkings": {
+        "Parking Principal": 0
+      }
+    },
+    {
+      "hora": "21:00",
+      "parkings": {
+        "Parking Principal": 9
+      }
+    }
+  ]
+}

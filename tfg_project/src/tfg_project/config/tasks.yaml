@@ -1,7 +1,8 @@
 responder_pregunta_overseer:
   description: >
     Debes reponder a la pregunta {topic} a los alumnos con la información que tienes. Si no puedes responderla,
-    delega la pregunta a los agentes que tienes a tu disposición. Ten en cuenta la fecha: {time}.
+    delega la pregunta a los agentes que tienes a tu disposición. Si obtienes información de varias 
+    fuentes de datos, unifíca los datos para dar la mejor respuesta posible. Ten en cuenta la fecha: {time}.
   expected_output: >
     Tu respuesta debe ser un texto claro y amigable, que explique la respuesta de una manera sencilla y
     sin tecnicismos.

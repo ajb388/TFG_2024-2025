@@ -68,10 +68,6 @@ class GoogleMapsRouteTool(BaseTool):
 
         return (
             f"🚶 **Ruta a pie desde {origin} hasta {destination} (Campus UAL)**\n"
-            f"- ⏱️ Tiempo estimado: {duration}\n"
-            f"- 📏 Distancia total: {distance}\n\n"
-            f"📍 **Pasos sugeridos:**\n" +
-            "\n".join(steps) +
             f"\n\n🔗 Ver en Google Maps: {gmaps_url}"
         )
 

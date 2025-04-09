@@ -78,17 +78,77 @@ class TfgProject():
         verbose=True,
     )
 
+    json_lunes = JSONKnowledgeSource(
+        file_paths='lunes.json',
+        knowledge_source_name='lunes',
+        verbose=True,
+    )
+
+    json_martes = JSONKnowledgeSource(
+        file_paths='martes.json',
+        knowledge_source_name='martes',
+        verbose=True,
+    )
+
+    json_miercoles = JSONKnowledgeSource(
+        file_paths='miercoles.json',
+        knowledge_source_name='miercoles',
+        verbose=True,
+    )
+
+    json_jueves = JSONKnowledgeSource(
+        file_paths='jueves.json',
+        knowledge_source_name='jueves',
+        verbose=True,
+    )
+
+    json_viernes = JSONKnowledgeSource(
+        file_paths='viernes.json',
+        knowledge_source_name='viernes',
+        verbose=True,
+    )
+
+    json_sabado = JSONKnowledgeSource(
+        file_paths='sabado.json',
+        knowledge_source_name='sabado',
+        verbose=True,
+    )
+
+    json_domingo = JSONKnowledgeSource(
+        file_paths='domingo.json',
+        knowledge_source_name='domingo',
+        verbose=True,
+    )
+
     @agent
     def overseer(self) -> Agent:
         return Agent(
             config=self.agents_config['overseer'],
             verbose=True,
+            allow_delegation=True,
+            memory=False,
+        )
+    
+    @agent
+    def search_place_agent(self) -> Agent:
+        return Agent(
+            config=self.agents_config['search_place_agent'],
+            verbose=True,
             tools=[
-                GoogleMapsRouteTool(),
                 GoogleMapsPlaceSearchTool(),
             ],
-            allow_delegation=True,
-           
+            memory=False,
+        )
+    
+    @agent
+    def place_to_place_agent(self) -> Agent:
+        return Agent(
+            config=self.agents_config['place_to_place_agent'],
+            verbose=True,
+            tools=[
+                GoogleMapsRouteTool(),
+            ],
+            memory=False,
         )
 
     @agent
@@ -109,6 +169,7 @@ class TfgProject():
                 self.json_central,
                 self.json_starbucks,
             ],
+            memory=False,
         )
     
     @agent
@@ -125,6 +186,7 @@ class TfgProject():
                 self.json_aulario_4,
                 self.json_aulario_5,
             ],
+            memory=False,
         )
     
     @agent
@@ -142,15 +204,24 @@ class TfgProject():
             knowledge_sources=[
                 self.pdf_biblioteca,
             ],
+            memory=False,
         )
     
+    @agent
     def parking_advisor(self) -> Agent:
         return Agent(
             config=self.agents_config['parking_advisor'],
             verbose=True,
-            tools=[
-                
+            knowledge_sources=[
+                self.json_lunes,
+                self.json_martes,
+                self.json_miercoles,
+                self.json_jueves,
+                self.json_viernes,
+                self.json_sabado,
+                self.json_domingo,
             ],
+            memory=False,
         )
 
     @task
@@ -168,5 +239,4 @@ class TfgProject():
             tasks=self.tasks,
             process=Process.sequential,
             verbose=True,
-
         )

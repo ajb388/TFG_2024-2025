@@ -20,7 +20,6 @@ def run():
     inputs = {
         'topic': input("Enter the topic: "),
         'time': datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
-        'location': 'Universidad de Almeria',
     }
     
     try:
