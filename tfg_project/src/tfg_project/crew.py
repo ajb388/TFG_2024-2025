@@ -12,6 +12,8 @@ class TfgProject():
     agents_config = 'config/agents.yaml'
     tasks_config = 'config/tasks.yaml'
 
+
+
     json_humanidades = JSONKnowledgeSource(
         file_paths='cafeteria_humanidades.json',
         knowledge_source_name='cafeteria_humanidades',
@@ -127,28 +129,10 @@ class TfgProject():
             verbose=True,
             allow_delegation=True,
             memory=False,
-        )
-    
-    @agent
-    def search_place_agent(self) -> Agent:
-        return Agent(
-            config=self.agents_config['search_place_agent'],
-            verbose=True,
-            tools=[
-                GoogleMapsPlaceSearchTool(),
-            ],
-            memory=False,
-        )
-    
-    @agent
-    def place_to_place_agent(self) -> Agent:
-        return Agent(
-            config=self.agents_config['place_to_place_agent'],
-            verbose=True,
             tools=[
                 GoogleMapsRouteTool(),
+                GoogleMapsPlaceSearchTool(),
             ],
-            memory=False,
         )
 
     @agent

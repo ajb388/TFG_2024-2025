@@ -1,7 +1,3 @@
-Para llegar a la biblioteca del campus, puedes seguir estos pasos:
+La cafetería más cercana al Aulario V es la **Cafetería CAE**, ubicada en el Centro de Atención al Estudiante de la Universidad de Almería. Está abierta de lunes a viernes de 09:00 a 20:00 y ofrece un horario de comida de 13:00 a 16:00, lo que la hace ideal para ti. Allí podrás encontrar platos combinados de buena calidad, como pechuga de pollo, magra al roquefort y hamburguesa de buey, perfectos para una comida rápida.
 
-1. **Ubicación de inicio**: Sal de tu ubicación actual en el campus.
-2. **Ruta a pie**: Dirígete hacia la biblioteca siguiendo las señales que existen en el campus. 
-3. **Uso de mapas en línea**: Si prefieres, puedes utilizar este enlace de Google Maps que te guiará paso a paso desde tu ubicación hasta la biblioteca: [Ruta a la biblioteca en Google Maps](https://www.google.com/maps/dir/?api=1&origin=tu+ubicación+actual+en+el+campus+Universidad+de+Almería,+Almería,+España&destination=biblioteca+del+campus+Universidad+de+Almería,+Almería,+España&hl=es&travelmode=walking).
-
-Si necesitas más ayuda o información sobre la biblioteca, ¡no dudes en preguntar!
+Para llegar a la Cafetería CAE desde el Aulario V, puedes seguir la ruta a pie que te lleva directamente allí. La duración del recorrido es corta, así que no tendrás problemas para comer antes de tu examen a las 16:00. Aquí tienes el enlace para ver la ruta en Google Maps: [Ver ruta](https://www.google.com/maps/dir/?api=1&origin=Aulario+V+Universidad+de+Almería,+Almería,+España&destination=Cafetería+CAE+Universidad+de+Almería,+Almería,+España&hl=es&travelmode=walking). ¡Buena suerte en tu examen!
