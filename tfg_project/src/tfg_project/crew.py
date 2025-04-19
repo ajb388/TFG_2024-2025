@@ -1,10 +1,9 @@
 from crewai import Agent, Crew, Process, Task
 from crewai.project import CrewBase, agent, crew, task
 from crewai_tools import VisionTool
-from crewai.knowledge.source.json_knowledge_source import JSONKnowledgeSource
-from crewai.knowledge.source.pdf_knowledge_source import PDFKnowledgeSource
 from tfg_project.tools.custom_tool import GoogleMapsRouteTool, GoogleMapsPlaceSearchTool
 from crewai_tools import ScrapeWebsiteTool
+from tfg_project.config.files import files as config_files
 
 @CrewBase
 class TfgProject():
@@ -12,115 +11,6 @@ class TfgProject():
     agents_config = 'config/agents.yaml'
     tasks_config = 'config/tasks.yaml'
 
-
-
-    json_humanidades = JSONKnowledgeSource(
-        file_paths='cafeteria_humanidades.json',
-        knowledge_source_name='cafeteria_humanidades',
-        verbose=True,
-    )
-
-    json_cae = JSONKnowledgeSource(
-        file_paths='cafeteria_cae.json',
-        knowledge_source_name='cafeteria_cae',
-        verbose=True,
-    )
-
-    json_central = JSONKnowledgeSource(
-        file_paths='cafeteria_central.json',
-        knowledge_source_name='cafeteria_central',
-        verbose=True,
-    )
-
-    json_comedor = JSONKnowledgeSource(
-        file_paths='comedor_ual.json',
-        knowledge_source_name='comedor',
-        verbose=True,
-    )
-
-    json_starbucks = JSONKnowledgeSource(
-        file_paths='Starbucks_corners.json',
-        knowledge_source_name='maquina_starbucks',
-        verbose=True,
-    )
-
-    json_aulario_1 = JSONKnowledgeSource(
-        file_paths='aulario_1.json',
-        knowledge_source_name='aulario_1',
-        verbose=True,
-    )
-
-    json_aulario_2 = JSONKnowledgeSource(
-        file_paths='aulario_2.json',
-        knowledge_source_name='aulario_2',
-        verbose=True,
-    )
-
-    json_aulario_3 = JSONKnowledgeSource(
-        file_paths='aulario_3.json',
-        knowledge_source_name='aulario_3',
-        verbose=True,
-    )
-
-    json_aulario_4 = JSONKnowledgeSource(
-        file_paths='aulario_4.json',
-        knowledge_source_name='aulario_4',
-        verbose=True,
-    )
-
-    json_aulario_5 = JSONKnowledgeSource(
-        file_paths='aulario_5.json',
-        knowledge_source_name='aulario_5',
-        verbose=True,
-    )
-
-    pdf_biblioteca = PDFKnowledgeSource(
-        file_paths='Guia_biblioteca.pdf',
-        knowledge_source_name='biblioteca',
-        verbose=True,
-    )
-
-    json_lunes = JSONKnowledgeSource(
-        file_paths='lunes.json',
-        knowledge_source_name='lunes',
-        verbose=True,
-    )
-
-    json_martes = JSONKnowledgeSource(
-        file_paths='martes.json',
-        knowledge_source_name='martes',
-        verbose=True,
-    )
-
-    json_miercoles = JSONKnowledgeSource(
-        file_paths='miercoles.json',
-        knowledge_source_name='miercoles',
-        verbose=True,
-    )
-
-    json_jueves = JSONKnowledgeSource(
-        file_paths='jueves.json',
-        knowledge_source_name='jueves',
-        verbose=True,
-    )
-
-    json_viernes = JSONKnowledgeSource(
-        file_paths='viernes.json',
-        knowledge_source_name='viernes',
-        verbose=True,
-    )
-
-    json_sabado = JSONKnowledgeSource(
-        file_paths='sabado.json',
-        knowledge_source_name='sabado',
-        verbose=True,
-    )
-
-    json_domingo = JSONKnowledgeSource(
-        file_paths='domingo.json',
-        knowledge_source_name='domingo',
-        verbose=True,
-    )
 
     @agent
     def overseer(self) -> Agent:
@@ -147,11 +37,11 @@ class TfgProject():
                 VisionTool(description= "This tool uses OpenAI's Vision API to describe the contents of an image. The image is /app/tfg_project/images/comedor_ual.jpg"),
             ],
             knowledge_sources=[
-                self.json_comedor,
-                self.json_humanidades,
-                self.json_cae,
-                self.json_central,
-                self.json_starbucks,
+                config_files.json_humanidades,
+                config_files.json_cae,
+                config_files.json_central,
+                config_files.json_comedor,
+                config_files.json_starbucks,
             ],
             memory=False,
         )
@@ -164,11 +54,11 @@ class TfgProject():
             tools=[
             ],
             knowledge_sources=[
-                self.json_aulario_1,
-                self.json_aulario_2,
-                self.json_aulario_3,
-                self.json_aulario_4,
-                self.json_aulario_5,
+                config_files.json_aulario_1,
+                config_files.json_aulario_2,
+                config_files.json_aulario_3,
+                config_files.json_aulario_4,
+                config_files.json_aulario_5,
             ],
             memory=False,
         )
@@ -186,7 +76,7 @@ class TfgProject():
                 ScrapeWebsiteTool(website_url='https://www.ual.es/universidad/serviciosgenerales/biblioteca/servicios'),
             ],
             knowledge_sources=[
-                self.pdf_biblioteca,
+                config_files.pdf_biblioteca,
             ],
             memory=False,
         )
@@ -197,13 +87,13 @@ class TfgProject():
             config=self.agents_config['parking_advisor'],
             verbose=True,
             knowledge_sources=[
-                self.json_lunes,
-                self.json_martes,
-                self.json_miercoles,
-                self.json_jueves,
-                self.json_viernes,
-                self.json_sabado,
-                self.json_domingo,
+                config_files.json_lunes,
+                config_files.json_martes,
+                config_files.json_miercoles,
+                config_files.json_jueves,
+                config_files.json_viernes,
+                config_files.json_sabado,
+                config_files.json_domingo,
             ],
             memory=False,
         )
