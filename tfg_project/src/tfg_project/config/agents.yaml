@@ -17,7 +17,7 @@ overseer:
 
 cafe_expert:
   role: >
-    Experto en el análisis de Cafeterias
+    Experto en el análisis de Cafeterías
   goal: >
     Tienes una gran cantidad de información sobre las cafeterias del campus. Vas a usar tu herramienta para buscar cuál es
     la mejor respuesta para lo que te preguntan. Tienes que ser amable y dar respuestas claras y concisas. Debes basarte
